@@ -1,0 +1,30 @@
+# SAS-how-to-use-SAS-informats-mdyampm-and-anydtdtm
+#How to use SAS date informats mdyampm and anydtdtm
+#both informats produce the same result.
+
+/*using informat_mdyampm*/
+data informat_mdyampm;
+  x = input("10/10/2018 15:57:10",mdyampm.);
+  y = input("10/10/2018 15:57:11",mdyampm.);
+  put x;  
+  put y; 
+run;
+
+/*using informat_mdyampm*/
+data informat_anydtdtm;
+  x = input("10/10/2018 15:57:10",anydtdtm.);
+  y = input("10/10/2018 15:57:11",anydtdtm.);
+  put x;  
+  put y; 
+run;
+
+#log results
+
+/*using informat_mdyampm*/
+1854806230
+1854806231
+
+
+/*using informat_mdyampm*/
+1854806230
+1854806231
